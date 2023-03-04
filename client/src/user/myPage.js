@@ -3,7 +3,7 @@ import { View,Text,ScrollView } from 'react-native';
 
 import { template } from "../styles/template/page";
 
-class GetTrails extends Component {
+class MyPage extends Component {
     constructor(props) {
         super(props);
     }
@@ -11,9 +11,9 @@ class GetTrails extends Component {
     render() {
         return (
         <View style={template.total_container}>
-            <Text>산책로</Text>
+            <Text>내정보</Text>
        </View>
         );
     }
 }
-export default GetTrails;
+export default MyPage;

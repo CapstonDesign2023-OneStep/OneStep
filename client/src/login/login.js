@@ -16,13 +16,24 @@ class Login extends Component {
             autoLoginChecked:false,
         }
     }
+    //로그인 버튼 클릭
+    loginButtonClicked=()=>{
+        this.props.navigation.navigate("TabHome");
+    }
+    //자동 로그인 버튼
     autoLoginRadioButtonChecked=()=>{
         this.setState({autoLoginChecked:!this.state.autoLoginChecked})
     }
+    //회원가입으로 
     goMemberRegisterScreen=()=>{
         this.props.navigation.navigate('MemberRegister');
     }
+    //비밀번호 찾기로
+    goFindPWScreen=()=>{
+        this.props.navigation.navigate('FindPW');
+    }
     render() {
+        console.log('자동로그인',this.state.autoLoginChecked)
         return (
             <View style={template.total_container}>
                 <View style={template.container}>
@@ -42,7 +53,7 @@ class Login extends Component {
                         </TouchableOpacity>
                     </View>
                     <View style={styles.buttonView}>
-                        <TouchableOpacity activeOpacity={0.8} style={template.button}>
+                        <TouchableOpacity activeOpacity={0.8} style={template.button} onPress={this.loginButtonClicked}>
                             <Text style={template.buttonText}>로그인</Text>
                         </TouchableOpacity>
 
