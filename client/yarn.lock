@@ -6031,7 +6031,7 @@
     "kleur" "^3.0.3"
     "sisteransi" "^1.0.5"
 
-"prop-types@^15.7.2", "prop-types@^15.8.1":
+"prop-types@^15.6.2", "prop-types@^15.7.2", "prop-types@^15.8.1":
   "integrity" "sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg=="
   "resolved" "https://registry.npmjs.org/prop-types/-/prop-types-15.8.1.tgz"
   "version" "15.8.1"
@@ -6195,6 +6195,13 @@
   "integrity" "sha512-SJXSWH1pu4V3Kj4UuX/vSgOxc9d5wb5+nHqBHd+5iUtVyVLEp0F6Jbbaha7tDoU+kUBwonhlwr2o8oV6NZ7Ibg=="
   "resolved" "https://registry.npmjs.org/react-native-vision-camera/-/react-native-vision-camera-2.15.4.tgz"
   "version" "2.15.4"
+
+"react-native-web-swiper@^2.2.4":
+  "integrity" "sha512-Lq6fgCuVhEzxgWJU5t+wWhCoOfd0jfQ1Qdwyww/Kln4McPXFKQ6MaSuUHltnFOKYHej97R7avPchn+QB1wIFQg=="
+  "resolved" "https://registry.npmjs.org/react-native-web-swiper/-/react-native-web-swiper-2.2.4.tgz"
+  "version" "2.2.4"
+  dependencies:
+    "prop-types" "^15.6.2"
 
 "react-native-webview@^11.24.0":
   "integrity" "sha512-hC7BkxOpf+z0UKhxFSFTPAM4shQzYmZHoELa6/8a/MspcjEP7ukYKpuSUTLDywQditT8yI9idfcKvfZDKQExGw=="

@@ -1,12 +1,11 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet,Dimensions} from 'react-native';
 const ScreenHeight=Dimensions.get('window').height;
 const ScreenWidth=Dimensions.get('window').width;
-export const styles = StyleSheet.create({
+export const template = StyleSheet.create({
 
     total_container:{
         flex:1,
         backgroundColor:'white',
-
     },
     container:{
         flex:1,
@@ -14,5 +13,6 @@ export const styles = StyleSheet.create({
         marginLeft:30,
         marginRight:30,
     },
+    
   
 });
