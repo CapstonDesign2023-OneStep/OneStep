@@ -6,8 +6,7 @@ import {styles} from "../styles/screens/login/onboarding";
 
 import { BLUE_COLOR, GREEN_COLOR } from '../utils/color';
 import Swiper from 'react-native-web-swiper';
-import { color } from 'react-native-reanimated';
-import { ScrollView } from 'react-native-gesture-handler';
+
 
 class OnBoarding extends Component {
     constructor(props) {
