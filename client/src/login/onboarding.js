@@ -22,6 +22,7 @@ class OnBoarding extends Component {
     }
     render() {
         return (
+           
         <View style={template.total_container}>
           
             <View style={styles.onboardingView}>
@@ -31,7 +32,7 @@ class OnBoarding extends Component {
                         <ImageBackground source={require('../images/logo.png')} style={{width:'100%',height:'65%'}} ></ImageBackground>
                         <Text style={[styles.titleText,{color:GREEN_COLOR}]}>한걸음</Text>
                         <Text style={[styles.titleText,{marginBottom:'3%',fontSize:25}]}>내딛어볼까요?</Text>
-                        <Text style={{ marginHorizontal:'10%',fontSize:18}}>지금 바로 가입하세요 ! </Text>
+                        <Text style={{ marginHorizontal:'10%',fontSize:15}}>우리 동네 산책로 한눈에 보자 </Text>
                     </View>
                     <View>
                         <Text>산책코스 추천</Text>
@@ -52,7 +53,7 @@ class OnBoarding extends Component {
             </View>
             
        </View>
-   
+     
         );
     }
 }

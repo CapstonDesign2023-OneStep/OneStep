@@ -30,7 +30,7 @@ export const styles = StyleSheet.create({
     },
     titleText:{
         fontSize:27,
-        fontWeight:'600',
+        fontWeight:'900',
         color:BLACK_COLOR,
         marginHorizontal:'10%'
     },
