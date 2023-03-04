@@ -1,5 +1,5 @@
 import { StyleSheet,Dimensions} from 'react-native';
-import { Light_Gray ,Dark_Gary} from '../../utils/color';
+import { Light_Gray ,Dark_Gary, GREEN_COLOR} from '../../utils/color';
 const ScreenHeight=Dimensions.get('window').height;
 const ScreenWidth=Dimensions.get('window').width;
 export const template = StyleSheet.create({
@@ -20,5 +20,17 @@ export const template = StyleSheet.create({
         borderRadius:5,
         marginBottom:'5%'
     },
-  
+    button:{
+        backgroundColor:GREEN_COLOR,
+        width:'100%',
+        height:ScreenHeight/14,
+        borderRadius:5,
+        marginBottom:'5%',
+        alignItems:'center',
+        justifyContent:'center'
+    },
+    buttonText:{
+        color:'white',
+        fontSize:16,
+    },
 });

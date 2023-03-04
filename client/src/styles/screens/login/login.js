@@ -4,11 +4,10 @@ export const styles = StyleSheet.create({
 
     textInputView:{
         height:'30%',
-        borderWidth:1,
         paddingTop:'5%',
     },
     buttonView:{
         height:'20%',
-        borderWidth:1,
+        alignItems:'center',
     }
 });

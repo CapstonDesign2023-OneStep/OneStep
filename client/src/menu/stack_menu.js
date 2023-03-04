@@ -5,6 +5,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import OnBoarding from "../login/onboarding";
 import MemberRegister from "../login/member_register";
 import Login from "../login/login";
+import FindPW from "../login/find_pw";
 const NativeStack = createNativeStackNavigator();
 class Stack extends Component{
 
@@ -18,10 +19,15 @@ class Stack extends Component{
 
                 <NativeStack.Screen name="OnBoarding" component={OnBoarding}
                 options={{ headerShown: false }} />
+
                 <NativeStack.Screen name="MemberRegister" component={MemberRegister}
                 options={{ title:'회원가입' }} />
+
                  <NativeStack.Screen name="Login" component={Login}
                 options={{ title:'로그인' }} />
+
+                <NativeStack.Screen name="FindPW" component={FindPW}
+                options={{ title:'비밀번호 찾기' }} />
             </NativeStack.Navigator>
         );
     }
