@@ -18,7 +18,8 @@ export const template = StyleSheet.create({
         borderWidth:1,
         borderColor:Dark_Gary,
         borderRadius:5,
-        marginBottom:'5%'
+        marginBottom:'5%',
+        paddingLeft:'5%'
     },
     button:{
         backgroundColor:GREEN_COLOR,
