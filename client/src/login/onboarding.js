@@ -29,9 +29,9 @@ class OnBoarding extends Component {
                     controlsProps={{prevPos:false,nextPos:false,dotsWrapperStyle:{color:GREEN_COLOR}, dotActiveStyle:{backgroundColor:BLUE_COLOR,width:15,}}}>
                     <View>
                         <ImageBackground source={require('../images/logo.png')} style={{width:'100%',height:'65%'}} ></ImageBackground>
-                        <Text style={[styles.titleText,{color:GREEN_COLOR}]}>한걸음</Text>
+                        <Text style={[styles.titleText,{color:BLUE_COLOR}]}>한걸음</Text>
                         <Text style={[styles.titleText,{marginBottom:'3%',fontSize:25}]}>내딛어볼까요?</Text>
-                        <Text style={{ marginHorizontal:'10%',fontSize:15}}>우리 동네 산책로 한눈에 보자 </Text>
+                        <Text style={{ marginHorizontal:'10%',fontSize:15}}>우리 동네 산책로 추천 받아보세요 </Text>
                     </View>
                     <View>
                         <Text>산책코스 추천</Text>

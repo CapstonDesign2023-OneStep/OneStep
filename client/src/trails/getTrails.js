@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
 import { View,Text,ScrollView } from 'react-native';
 
-import { template } from "../styles/template/page";
+import OrdinaryTrails from './ordinaryTrails';
+import CompanionTrails from './companionTrails';
+
+
+import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
+import { GREEN_COLOR, Light_GREEN } from '../utils/color';
+const Tab=createMaterialTopTabNavigator();
 
 class GetTrails extends Component {
     constructor(props) {
@@ -10,9 +16,14 @@ class GetTrails extends Component {
   
     render() {
         return (
-        <View style={template.total_container}>
-            <Text>산책로</Text>
-       </View>
+            <Tab.Navigator
+                screenOptions={{
+                    tabBarLabelStyle:{fontSize:14},
+                   
+                }}>
+            <Tab.Screen name="OrdinaryTrails" component={OrdinaryTrails} options={{tabBarLabel:'일반인'}}/>
+            <Tab.Screen name="CompanionTrails" component={CompanionTrails}  options={{tabBarLabel:'반려인'}}/>
+          </Tab.Navigator>
         );
     }
 }

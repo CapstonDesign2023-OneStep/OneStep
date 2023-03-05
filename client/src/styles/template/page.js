@@ -1,5 +1,5 @@
 import { StyleSheet,Dimensions} from 'react-native';
-import { Light_Gray ,Dark_Gary, GREEN_COLOR} from '../../utils/color';
+import { Light_Gray ,Dark_Gary, GREEN_COLOR, BLACK_COLOR} from '../../utils/color';
 const ScreenHeight=Dimensions.get('window').height;
 const ScreenWidth=Dimensions.get('window').width;
 export const template = StyleSheet.create({
@@ -14,6 +14,12 @@ export const template = StyleSheet.create({
         marginLeft:30,
         marginRight:30,
     },
+    titleText:{
+        fontSize:15,
+        color:BLACK_COLOR,
+        marginBottom:'2%',
+        fontWeight:"bold",
+      },
     textInput:{
         borderWidth:1,
         borderColor:Dark_Gary,

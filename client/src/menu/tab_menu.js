@@ -4,8 +4,9 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
 import { BLACK_COLOR,Dark_Gary,GREEN_COLOR,Light_Gray } from '../utils/color';
 
-import Icon from "react-native-vector-icons/Foundation";
-
+import IconFound from "react-native-vector-icons/Foundation";
+import IconFeather from "react-native-vector-icons/Feather";
+import IconFontAwe from "react-native-vector-icons/FontAwesome";
 import Home from "../home/home";
 import GetTrails from "../trails/getTrails";
 import Community from '../community/community';
@@ -40,27 +41,27 @@ class Tabs extends Component{
                 }
             }}>
                 <Tab.Screen name="Home" component={Home} options={{
-                    title:"홈",
+                    title:"홈", headerShown:false,
                     tabBarIcon:({focused,color,size})=>{
-                        return  <Icon name="foot" color={color} size={size} /> 
+                        return  <IconFound name="foot" color={color} size={size} /> 
                     }
                 }}/>
                 <Tab.Screen name="GetTrails" component={GetTrails} options={{
                     title:"산책로",
                     tabBarIcon:({focused,color,size})=>{
-                        return  <Icon name="map" color={color} size={size} /> 
+                        return  <IconFeather name="map-pin" color={color} size={size} /> 
                     }
                 }}/>
                 <Tab.Screen name="Community" component={Community} options={{
                     title:"커뮤니티",
                     tabBarIcon:({focused,color,size})=>{
-                        return  <Icon name="page-edit" color={color} size={size} /> 
+                        return  <IconFontAwe name="commenting-o" color={color} size={size} /> 
                     }
                 }}/>
                 <Tab.Screen name="MyPage" component={MyPage} options={{
                     title:"내정보",
                     tabBarIcon:({focused,color,size})=>{
-                        return  <Icon name="torso" color={color} size={size} /> 
+                        return  <IconFontAwe name="user-o" color={color} size={size} /> 
                     }
                 }}/>
             

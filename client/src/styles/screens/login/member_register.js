@@ -7,6 +7,7 @@ export const styles = StyleSheet.create({
      marginBottom:'2%',
      fontWeight:"bold",
    },
+
    buttonSelectView:{
     //borderWidth:1,
     height:'8%',
@@ -22,14 +23,13 @@ export const styles = StyleSheet.create({
     alignItems:'center',
     justifyContent:'center',
     borderRadius:10,
-    borderColor:BLUE_COLOR,
-    backgroundColor:BLUE_COLOR,
+    borderColor:GREEN_COLOR,
     borderWidth:1,
     marginHorizontal:'3%'
    },
 
    typeButtonText:{
-        color:'white',
+        color:GREEN_COLOR,
         marginBottom:'2%',
         fontWeight:"bold",
         fontSize:17,
