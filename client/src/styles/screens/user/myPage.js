@@ -6,7 +6,11 @@ export const styles = StyleSheet.create({
         //borderWidth:1,
         flexDirection:'row',
         alignItems:'center',
-        marginBottom:'10%'
+        marginBottom:'10%',
+        backgroundColor:'#EBEBEB',
+        paddingLeft:'5%',
+        paddingVertical:'2%',
+        borderRadius:10,
         //justifyContent:'center'
     },
     profileImageView:{
@@ -25,12 +29,30 @@ export const styles = StyleSheet.create({
         borderColor:Light_Gray,
         paddingHorizontal:'5%',
         paddingLeft:'5%',
-        paddingVertical:'2%'
+        paddingVertical:'2%',
+        marginBottom:'5%',
+        
+    },
+    menuView2:{
+       
+        justifyContent:'center',
+        paddingVertical:'2%',
+        marginBottom:'5%',
+        flexDirection:'row',
     },
     menuTextView:{
         borderBottomColor:Light_Gray,
         borderBottomWidth:1, 
         width:'80%'
+    },
+    buttonStyle2:{
+        borderWidth:1,
+        borderColor:Light_Gray,
+        borderRadius:10,
+        paddingVertical:'2%',
+        width:'25%',
+        alignItems:'center',
+        marginHorizontal:'2%'
     },
     buttonStyle:{
         //borderWidth:1,
@@ -41,7 +63,7 @@ export const styles = StyleSheet.create({
    
     IconStyle:{
         marginRight:'5%',
-        
+        marginBottom:'2%',
         alignItems:'center',
         justifyContent:'center',
         
