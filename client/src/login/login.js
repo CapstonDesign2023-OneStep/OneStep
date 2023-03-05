@@ -72,7 +72,7 @@ class Login extends Component {
                             placeholder="비밀번호"
                             onChangeText={(value) => this.setState({ passwd: value })}
                             onEndEditing={(event) => this.onValueChange()}
-                            //secureTextEntry={true}
+                            secureTextEntry={true}
                         />
                         <TouchableOpacity activeOpacity={0.8} style={{flexDirection:'row',alignItems:'center'}} onPress={this.autoLoginRadioButtonChecked}>
                             <IconCheck name={this.state.autoLoginChecked ? "check-box" : "check-box-outline-blank"} size={25} color={GREEN_COLOR}/>
