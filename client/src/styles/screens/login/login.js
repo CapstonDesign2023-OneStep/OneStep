@@ -7,6 +7,8 @@ export const styles = StyleSheet.create({
         paddingTop:'5%',
     },
     buttonView:{
+        marginTop:'10%',
+        //borderWidth:1,
         height:'20%',
         alignItems:'center',
     }
