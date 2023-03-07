@@ -52,6 +52,6 @@ export const styles = StyleSheet.create({
         backgroundColor:'white',
         paddingVertical:'5%',
         paddingLeft:'5%',
-        height:ScreenHeight/2,
+        height:ScreenHeight/2.5,
     },
 });
