@@ -11,7 +11,13 @@ class Home extends Component {
     constructor(props) {
         super(props);
         this.state={
-            imageURLs:'https://picsum.photos/seed/picsum/200/300',
+            imageURLs:['https://picsum.photos/seed/picsum/200/300'],
+            topTrail:[{name:'산책로'}],
+            topCommunity:[{number:1, title:"오늘 날씨 최고",kind:1,heart:23, comments:3},
+                        {number:2, title:"반려견 산책로 추천",kind:2,heart:20, comments:10},
+                        {number:3, title:"오늘 산책 인증",kind:2,heart:15, comments:5},
+                        {number:4, title:"포피랑 산책",kind:2,heart:10, comments:5},
+                        {number:5, title:"풍경좋은 산책로 추천",kind:1,heart:5, comments:15}]
         }
     }
     goTrailScreen=()=>{
@@ -20,12 +26,16 @@ class Home extends Component {
     goCommunityScreen=()=>{
         this.props.navigation.navigate('Community');
     }
+    kindText=(value)=>{
+        let kindText=["일반인 게시판","반려인 게시판"];
+        return kindText[value-1];
+    }
     render() {
         return (
         <View style={styles.total_container}>
             <View style={styles.headerView}>
                 <Image
-                    source={require('../images/logo_korean.png')} style={{width:100,height:60}}/>
+                    source={require('../images/logo_korean2.png')} style={{width:100,height:60}}/>
             </View>
             <ScrollView>
             <View style={styles.profileView}>
@@ -41,7 +51,7 @@ class Home extends Component {
             <View style={styles.trailTopView}>
                 <View style={styles.titleView}>
                     <View style={{flex:4}}>
-                    <Text style={template.titleText}>추천 산책로</Text>
+                        <Text style={template.titleText}>추천 산책로</Text>
                     </View>
                     <View style={{flex:1}}>
                         <TouchableOpacity onPress={this.goTrailScreen}><Text>전체보기</Text></TouchableOpacity>
@@ -51,13 +61,12 @@ class Home extends Component {
                 <View style={styles.trailContentView}>
                     <View style={styles.trailContentItemView}>
                         <Image
-                            source={{uri:this.state.imageURLs}} style={{width:90,height:90, borderRadius:10,marginBottom:'5%'}}/>
-                            
+                            source={{uri:this.state.imageURLs[0]}} style={{width:90,height:90, borderRadius:10,marginBottom:'5%'}}/>
+
                         <Text style={[template.titleText,{fontSize:13}]}>해피 산책로</Text>
                     </View>
                     
                 </View>
-             
             </View>
             <View style={styles.communityTopView}>
                 <View style={styles.titleView}>
@@ -69,24 +78,27 @@ class Home extends Component {
                     </View>
                 </View>
                 <View style={styles.communityContentView}>
-                    <View style={styles.coummunityContentItemView}>
+
+                 {this.state.topCommunity.map((item,index)=>(
+                    <View style={styles.coummunityContentItemView} key={index}>
                         <View style={{flex:1,ustifyContent:'center'}}>
-                            <Text style={[template.titleText,{color:GREEN_COLOR,fontSize:20,}]}>1.</Text>
+                            <Text style={[template.titleText,{color:GREEN_COLOR,fontSize:20,}]}>{item.number}.</Text>
                         </View>
                         <View style={{flex:8}}>
-                            <Text style={{fontSize:11}}>반려인 게시판</Text>
+                            <Text style={{fontSize:11}}>{this.kindText(item.kind)}</Text>
                             <View style={{flexDirection:'row'}}>
                                 <View style={{flex:1,}}>
-                                    <Text style={template.titleText}>오늘 산책 인증</Text>
+                                    <Text style={template.titleText}>{item.title}</Text>
                                 </View>
                                 <View style={{flex:1, alignItems:'flex-end'}}>
-                                    <Text style={{fontSize:11}}>좋아요 23  댓글 3</Text>
+                                    <Text style={{fontSize:11}}>좋아요 {item.heart}  댓글 {item.comments}</Text>
                                 </View>
                             </View>
                         </View>
                     </View>
+
+                 ))}
                   
-                    
                 </View>
                 
             </View>
