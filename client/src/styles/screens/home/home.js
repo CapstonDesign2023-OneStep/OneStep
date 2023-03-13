@@ -39,6 +39,28 @@ export const styles = StyleSheet.create({
         flexDirection:'row',
         
     },
+    communityContentView:{
+        marginRight:'5%',
+     
+    },
+    coummunityContentItemView:{
+        paddingVertical:'2%',
+        flexDirection:'row',
+        borderBottomColor:Light_Gray,
+        borderBottomWidth:1,
+
+    },
+    trailContentView:{
+        //borderWidth:1,
+        flexDirection:'row',
+        borderBottomColor:Light_Gray,
+        //borderBottomWidth:1,
+    },
+    trailContentItemView:{
+        //borderWidth:1,
+        marginRight:'2%',
+        alignItems:'center'
+    },
     trailTopView:{
         
         backgroundColor:'white',
