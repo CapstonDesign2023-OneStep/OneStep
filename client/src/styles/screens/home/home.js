@@ -16,7 +16,7 @@ export const styles = StyleSheet.create({
         paddingHorizontal:'5%',
         paddingVertical:'5%',
         flexDirection:'row',
-        height:ScreenHeight/4,
+        height:ScreenHeight/7,
     },
     profileImageView:{
         borderColor:Light_Gray,
@@ -25,7 +25,6 @@ export const styles = StyleSheet.create({
         borderRadius:30,
         paddingHorizontal:5,
         paddingVertical:15,
-        height:'50%',
         alignItems:'center',
         justifyContent:'center',
     },
@@ -64,7 +63,7 @@ export const styles = StyleSheet.create({
     trailTopView:{
         
         backgroundColor:'white',
-        height:ScreenHeight/3,
+        height:ScreenHeight/3.5,
         paddingLeft:'5%',
         paddingVertical:'5%',
         borderTopRightRadius:20,
@@ -74,6 +73,6 @@ export const styles = StyleSheet.create({
         backgroundColor:'white',
         paddingVertical:'5%',
         paddingLeft:'5%',
-        height:ScreenHeight/2.5,
+        height:ScreenHeight/2,
     },
 });
