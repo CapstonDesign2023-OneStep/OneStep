@@ -16,11 +16,9 @@ class OrdinaryTrails extends Component {
         return (
         <View style={template.total_container}>
             <ScrollView>
-            <Text>일반인 산책로</Text>
+            
 
-            <TouchableOpacity style={styles.floatingButton}>
-                <IconButton name={"pluscircle"} size={40} color={GREEN_COLOR}/>
-            </TouchableOpacity>
+            
             </ScrollView>
        </View>
         );
