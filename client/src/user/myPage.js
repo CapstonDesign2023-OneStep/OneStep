@@ -49,7 +49,7 @@ class MyPage extends Component {
 
                     <TouchableOpacity style={styles.buttonStyle2} onPress={this.goTrailNoteScreen}>
                         <View style={styles.IconStyle}>
-                            <IconFontAwe name="calendar" color={BLUE_COLOR} size={25} />
+                            <IconFontAwe name="calendar-check-o" color={BLUE_COLOR} size={25} />
                         </View>
                         <Text style={template.titleText}>산책 기록</Text>
                         

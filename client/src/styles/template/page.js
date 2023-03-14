@@ -15,7 +15,7 @@ export const template = StyleSheet.create({
         marginRight:30,
     },
     titleText:{
-        fontSize:15,
+        fontSize:16,
         color:BLACK_COLOR,
         marginBottom:'2%',
         fontWeight:"bold",
