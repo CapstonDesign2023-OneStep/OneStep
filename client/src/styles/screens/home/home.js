@@ -56,9 +56,10 @@ export const styles = StyleSheet.create({
         //borderBottomWidth:1,
     },
     trailContentItemView:{
-        //borderWidth:1,
+        borderWidth:1,
         marginRight:'2%',
-        alignItems:'center'
+        alignItems:'center',
+        flexDirection:'row'
     },
     trailTopView:{
         

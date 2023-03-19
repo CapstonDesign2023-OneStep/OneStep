@@ -28,10 +28,10 @@ class Community extends Component {
                                     placeholder="검색어를 입력해주세요"/>
             </View>
             <View style={w_styles.tabBarView}>
-                <TouchableOpacity style={w_styles.tabBatButton} onPress={this.ordinatyClicked}>
+                <TouchableOpacity activeOpacity={0.8} style={w_styles.tabBatButton} onPress={this.ordinatyClicked}>
                     <Text style={this.state.visible==1 ? [template.titleText,{color:GREEN_COLOR}]:template.titleText}>일반인</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={w_styles.tabBatButton} onPress={this.companionClicked}>
+                <TouchableOpacity activeOpacity={0.8} style={w_styles.tabBatButton} onPress={this.companionClicked}>
                     <Text style={this.state.visible==2 ? [template.titleText,{color:GREEN_COLOR}]:template.titleText}>반려인</Text>
                 </TouchableOpacity>
             </View>

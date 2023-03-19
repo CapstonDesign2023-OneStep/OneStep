@@ -61,12 +61,12 @@ class MemberRegister extends Component {
                    
                 
               
-                    <TouchableOpacity style={this.state.type==1 ? [styles.typeButton]:[styles.typeButton,{borderColor:Dark_Gary}]} onPress={this.ordinalButtonClicked}>
+                    <TouchableOpacity activeOpacity={0.8} style={this.state.type==1 ? [styles.typeButton]:[styles.typeButton,{borderColor:Dark_Gary}]} onPress={this.ordinalButtonClicked}>
                         <Text style={this.state.type==1 ?[styles.typeButtonText]:[styles.typeButtonText,{color:Dark_Gary}]}>일반인</Text>
                     </TouchableOpacity>
               
                
-                      <TouchableOpacity  style={this.state.type==2 ? [styles.typeButton]:[styles.typeButton,{borderColor:Dark_Gary}]}onPress={this.companionButtonClicked}>
+                      <TouchableOpacity activeOpacity={0.8}  style={this.state.type==2 ? [styles.typeButton]:[styles.typeButton,{borderColor:Dark_Gary}]}onPress={this.companionButtonClicked}>
                       <Text style={this.state.type==2 ?[styles.typeButtonText]:[styles.typeButtonText,{color:Dark_Gary}]}>반려인</Text>
                   </TouchableOpacity>
                 </View>
