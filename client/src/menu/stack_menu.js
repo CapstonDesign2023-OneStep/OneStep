@@ -8,7 +8,8 @@ import MemberRegister from "../login/member_register";
 import Login from "../login/login";
 import FindPW from "../login/find_pw";
 
-
+//Community
+import WriteCommunity from "../community/write_community";
 //User
 import PickTrails from "../user/pick_trails";
 import TrailNote from "../user/trail_note";
@@ -40,7 +41,8 @@ class Stack extends Component{
                 {/*산책로*/}
 
                 {/*커뮤니티*/}
-
+                <NativeStack.Screen name="WriteCommunity" component={WriteCommunity}
+                options={{ title:'글 작성하기' }} />
                 {/*내정보*/}
                 <NativeStack.Screen name="PickTrails" component={PickTrails}
                 options={{ title:'내 산책로' }} />

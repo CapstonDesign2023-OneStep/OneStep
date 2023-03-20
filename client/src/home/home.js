@@ -61,22 +61,15 @@ class Home extends Component {
                 </View>
                 
                 <View style={styles.trailContentView}>
-               
-                    <View style={styles.trailContentItemView}>
-                        
-                        {this.state.imageURLs.map((item,index)=>( <Image key={index}
-                            source={{uri:this.state.imageURLs[index]}} style={{width:90,height:90, borderRadius:10,marginBottom:'5%'}}/>
+                    <View style={styles.trailContentItemView}>  
+                            <Image 
+                            source={{uri:this.state.imageURLs[0]}} style={{width:90,height:90, borderRadius:10,marginBottom:'5%'}}/>
                             
-                            ))}
-                        {this.state.topTrail.map((item,index)=>(
-                            <Text key={index} style={[template.titleText,{fontSize:13}]}>{item.name}</Text>
-                        ))}
-
-                       
-                        
-                    </View>
+                            
+                      
+                            <Text  style={[template.titleText,{fontSize:13}]}>해피 산책로</Text>
                 
-                    
+                    </View>  
                 </View>
             </View>
             <View style={styles.communityTopView}>

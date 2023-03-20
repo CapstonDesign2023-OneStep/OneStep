@@ -7,7 +7,7 @@ class App extends Component {
   render() {
     return (
       <NavigationContainer>
-        <TabHome/>
+        <Stack/>
       </NavigationContainer>
     );
   }

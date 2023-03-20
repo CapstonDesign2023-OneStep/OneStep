@@ -3,6 +3,11 @@ import { Light_Gray,BLACK_COLOR,GREEN_COLOR,Line_COLOR } from '../../../utils/co
 const ScreenHeight=Dimensions.get('window').height;
 const ScreenWidth=Dimensions.get('window').width;
 export const styles = StyleSheet.create({
+    writeButton:{
+        top:'88%',
+        left:'83%',
+        position:'absolute'
+    },
     listView:{
         //borderWidth:1,
         flex:1,
