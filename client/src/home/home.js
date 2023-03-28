@@ -18,7 +18,7 @@ class Home extends Component {
             topCommunity:[{number:1, title:"오늘 날씨 최고",kind:1,heart:23, comments:3},
                         {number:2, title:"반려견 산책로 추천",kind:2,heart:20, comments:10},
                         {number:3, title:"오늘 산책 인증",kind:2,heart:15, comments:5},
-                        {number:4, title:"포피랑 산책",kind:2,heart:10, comments:5},
+                        {number:4, title:"초코랑 산책",kind:2,heart:10, comments:5},
                         {number:5, title:"풍경좋은 산책로 추천",kind:1,heart:5, comments:15}]
         }
     }
