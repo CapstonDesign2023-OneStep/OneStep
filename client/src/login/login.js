@@ -10,6 +10,8 @@ import { BLACK_COLOR, Dark_Gary, GREEN_COLOR, Light_Gray } from '../utils/color'
 class Login extends Component {
     constructor(props) {
         super(props);
+
+        this.passwordRef=React.createRef();
         this.state={
             id:'',
             passwd:'',
@@ -36,16 +38,20 @@ class Login extends Component {
         this.setState({autoLoginChecked:!this.state.autoLoginChecked})
     }
      //입력값 유효성 검사
-     onValueChange = () => {
-        let isValidForm = true;
-        if (this.state.id.trim().length == 0) { // 조건 필요시 추가
-            isValidForm = false;
-        }
-        if (this.state.passwd.trim().length == 0) {
-            isValidForm = false;
-        }
-        console.log("isValidForm", isValidForm);
-        this.setState({ validForm: isValidForm });
+     onValueChange = (value) => {
+
+        this.setState(value,()=>{
+            let isValidForm = true;
+            if (this.state.id.trim().length == 0) { // 조건 필요시 추가
+                isValidForm = false;
+            }
+            if (this.state.passwd.trim().length == 0) {
+                isValidForm = false;
+            }
+            console.log("isValidForm", isValidForm);
+            this.setState({ validForm: isValidForm });
+        })
+       
     }
 
     //회원가입으로 
@@ -65,13 +71,13 @@ class Login extends Component {
                         <TextInput style={template.textInput}
                             placeholder="이메일"
                             returnKeyType="next"
-                            onChangeText={(value) => this.setState({ id: value })} 
-                            onEndEditing={(event) => this.onValueChange()}
+                            onSubmitEditing={()=>{this.passwordRef.focus();}}
+                            onChangeText={(value) => {this.onValueChange({id:value})}} 
                         />
                         <TextInput style={template.textInput}
+                            ref={(c)=>{this.passwordRef=c;}}
                             placeholder="비밀번호"
-                            onChangeText={(value) => this.setState({ passwd: value })}
-                            onEndEditing={(event) => this.onValueChange()}
+                            onChangeText={(value)=>{this.onValueChange({passwd:value})}}
                             secureTextEntry={true}
                         />
                         <TouchableOpacity activeOpacity={0.8} style={{flexDirection:'row',alignItems:'center'}} onPress={this.autoLoginRadioButtonChecked}>
