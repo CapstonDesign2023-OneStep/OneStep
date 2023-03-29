@@ -11,8 +11,10 @@ class Home extends Component {
     constructor(props) {
         super(props);
         this.state={
-            imageURLs:['https://picsum.photos/seed/picsum/200/300'],
-            topTrail:[{name:'산책로'}],
+            imageURLs:['https://picsum.photos/seed/picsum/200/300','https://picsum.photos/id/237/200/300','https://picsum.photos/200/300/?blur',
+            'https://picsum.photos/id/870/200/300?grayscale&blur=2','https://picsum.photos/200/300?grayscale'],
+            topTrail:[{name:'해피산책로'},{name:'오솔길산책로'},
+            {name:'인제공원'},{name:'보라매공원'},{name:'멍멍산책로'}],
             topCommunity:[{number:1, title:"오늘 날씨 최고",kind:1,heart:23, comments:3},
                         {number:2, title:"반려견 산책로 추천",kind:2,heart:20, comments:10},
                         {number:3, title:"오늘 산책 인증",kind:2,heart:15, comments:5},
@@ -54,18 +56,20 @@ class Home extends Component {
                         <Text style={template.titleText}>추천 산책로</Text>
                     </View>
                     <View style={{flex:1}}>
-                        <TouchableOpacity onPress={this.goTrailScreen}><Text>전체보기</Text></TouchableOpacity>
+                        <TouchableOpacity activeOpacity={0.8} onPress={this.goTrailScreen}><Text>전체보기</Text></TouchableOpacity>
                     </View>
                 </View>
                 
                 <View style={styles.trailContentView}>
-                    <View style={styles.trailContentItemView}>
-                        <Image
+                    <View style={styles.trailContentItemView}>  
+                            <Image 
                             source={{uri:this.state.imageURLs[0]}} style={{width:90,height:90, borderRadius:10,marginBottom:'5%'}}/>
-
-                        <Text style={[template.titleText,{fontSize:13}]}>해피 산책로</Text>
-                    </View>
-                    
+                            
+                            
+                      
+                            <Text  style={[template.titleText,{fontSize:13}]}>해피 산책로</Text>
+                
+                    </View>  
                 </View>
             </View>
             <View style={styles.communityTopView}>
@@ -74,7 +78,7 @@ class Home extends Component {
                         <Text style={template.titleText}>인기글 Top5</Text>
                     </View>
                     <View style={{flex:1,}}>
-                        <TouchableOpacity onPress={this.goCommunityScreen}><Text>전체보기</Text></TouchableOpacity>
+                        <TouchableOpacity activeOpacity={0.8} onPress={this.goCommunityScreen}><Text>전체보기</Text></TouchableOpacity>
                     </View>
                 </View>
                 <View style={styles.communityContentView}>

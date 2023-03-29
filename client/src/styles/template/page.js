@@ -10,9 +10,9 @@ export const template = StyleSheet.create({
     },
     container:{
         flex:1,
-        marginTop:30,
-        marginLeft:30,
-        marginRight:30,
+        marginTop:"5%",
+        marginLeft:"7%",
+        marginRight:"7%",
     },
     titleText:{
         fontSize:16,
