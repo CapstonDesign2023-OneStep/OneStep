@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { View,Text,ScrollView } from 'react-native';
+import { View,Text,ScrollView,StyleSheet} from 'react-native';
 
+import { Calendar } from 'react-native-calendars';
 import { template } from "../styles/template/page";
 
 class TrailNote extends Component {
@@ -11,11 +12,18 @@ class TrailNote extends Component {
     render() {
         return (
         <View style={template.total_container}>
-            <ScrollView>
-            <Text>산책기록</Text>
-            </ScrollView>
+            <Calendar style={styles.calendar} />
+            
        </View>
         );
     }
 }
 export default TrailNote;
+
+const styles = StyleSheet.create({
+    calendar: {
+      borderBottomWidth: 1,
+      borderBottomColor: '#e0e0e0',
+    }
+  });
+  

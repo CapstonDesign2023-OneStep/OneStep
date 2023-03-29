@@ -37,6 +37,16 @@ class Login extends Component {
     autoLoginRadioButtonChecked=()=>{
         this.setState({autoLoginChecked:!this.state.autoLoginChecked})
     }
+    
+
+    //회원가입으로 
+    goMemberRegisterScreen=()=>{
+        this.props.navigation.navigate('MemberRegister');
+    }
+    //비밀번호 찾기로
+    goFindPWScreen=()=>{
+        this.props.navigation.navigate('FindPW');
+    }
      //입력값 유효성 검사
      onValueChange = (value) => {
 
@@ -52,15 +62,6 @@ class Login extends Component {
             this.setState({ validForm: isValidForm });
         })
        
-    }
-
-    //회원가입으로 
-    goMemberRegisterScreen=()=>{
-        this.props.navigation.navigate('MemberRegister');
-    }
-    //비밀번호 찾기로
-    goFindPWScreen=()=>{
-        this.props.navigation.navigate('FindPW');
     }
     render() {
         console.log('자동로그인',this.state.autoLoginChecked)
