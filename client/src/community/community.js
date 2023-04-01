@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View,Text,ScrollView,TextInput,TouchableOpacity } from 'react-native';
+import { View,Text,ScrollView,TextInput,TouchableOpacity, TouchableNativeFeedback } from 'react-native';
 import {w_styles} from "../styles/screens/trails/tab_bar";
 import {styles} from "../styles/screens/community/community";
 import { template } from '../styles/template/page';
@@ -25,15 +25,19 @@ class Community extends Component {
 
    }
    goWriteCommunityScreen=()=>{
-    this.props.navigation.navitate('WriteCommunity');
+    this.props.navigation.navigate('WriteCommunity');
    }
     render() {
         return (
           <>
           <View style={{flex:1}}>
+         
+
             <TouchableOpacity style={styles.writeButton} activeOpacity={0.8} onPress={this.goWriteCommunityScreen}>
                 <IconFontAwe name="plus-circle" color={GREEN_COLOR} size={50} />
             </TouchableOpacity>
+          
+           
             <View style={w_styles.searchBarView}>
                 <IconFontAwe name="search" color={Dark_Gary} size={20} />
                 <TextInput style={w_styles.searchTextInput}
@@ -49,8 +53,8 @@ class Community extends Component {
                     <Text style={this.state.visible==2 ? [template.titleText,{color:GREEN_COLOR}]:template.titleText}>반려인</Text>
                 </TouchableOpacity>
             </View>
-            {this.state.visible==1 && <OrdinaryCommunity/>}
-            {this.state.visible==2 && <CompanionCommunity/>}
+          {/*   {this.state.visible==1 && <OrdinaryCommunity/>}
+            {this.state.visible==2 && <CompanionCommunity/>} */}
             </View>
             </>
         );

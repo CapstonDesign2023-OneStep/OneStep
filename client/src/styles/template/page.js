@@ -30,7 +30,7 @@ export const template = StyleSheet.create({
     button:{
         backgroundColor:GREEN_COLOR,
         width:'100%',
-        height:ScreenHeight/14,
+        height:48,
         borderRadius:5,
         marginBottom:'5%',
         alignItems:'center',

@@ -46,5 +46,16 @@ export const styles = StyleSheet.create({
         //borderWidth:1,
         flexDirection:'row',
 
+    },
+
+    //글작성 디자인
+    writeView:{
+        //borderWidth:1,
+        flex:9
+    },
+    buttonView:{
+        //borderWidth:1,
+        flex:1,
+        paddingHorizontal:'5%'
     }
 });

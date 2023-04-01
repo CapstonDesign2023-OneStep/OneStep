@@ -20,6 +20,9 @@ class MyPage extends Component {
     goTrailNoteScreen=()=>{
         this.props.navigation.navigate('TrailNote');
     }
+    goEditProfileScreen=()=>{
+        this.props.navigation.navigate('EditProfile');
+    }
     render() {
         return (
         <ScrollView>
@@ -34,7 +37,8 @@ class MyPage extends Component {
                     <Text style={[template.titleText,{fontSize:20}]}>지유미</Text>
                     <Text>jiyumi00@naver.com</Text>
                     </View>
-                    <IconFontAwe name="angle-right" color={Dark_Gary} size={40} />
+                    <TouchableOpacity activeOpacity={0.7} onPress={this.goEditProfileScreen}><IconFontAwe name="angle-right" color={Dark_Gary} size={40} /></TouchableOpacity>
+                    
                 </View>
 
                 <View style={styles.menuView2}>

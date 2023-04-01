@@ -10,7 +10,7 @@ import IconFontAwe from "react-native-vector-icons/FontAwesome";
 import Home from "../home/home";
 import GetTrails from "../trails/getTrails";
 import Community from '../community/community';
-import MyPage from '../user/myPage';
+import MyPage from '../user/mypage';
 
 const Tab = createBottomTabNavigator(); // Tab 일 경우
 class Tabs extends Component{
