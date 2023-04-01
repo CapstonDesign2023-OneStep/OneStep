@@ -11,6 +11,7 @@ import FindPW from "../login/find_pw";
 //Community
 import WriteCommunity from "../community/write_community";
 //User
+import EditProfile from "../user/edit_profile";
 import PickTrails from "../user/pick_trails";
 import TrailNote from "../user/trail_note";
 import TabHome from "../menu/tab_menu";
@@ -48,6 +49,8 @@ class Stack extends Component{
                 options={{ title:'내 산책로' }} />
                 <NativeStack.Screen name="TrailNote" component={TrailNote}
                 options={{ title:'산책기록' }} />
+                <NativeStack.Screen name="EditProfile" component={EditProfile}
+                options={{ title:'내정보 수정' }} />
             </NativeStack.Navigator>
             
         );
