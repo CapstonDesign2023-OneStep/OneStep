@@ -91,8 +91,8 @@ export const styles = StyleSheet.create({
         borderWidth: 2,
     },
     camera_btn: {
-        width: 50,
-        height: 50,
+        width: 55,
+        height: 55,
         backgroundColor: "#F1F1F3",
         alignItems: 'center',
         justifyContent: 'center',

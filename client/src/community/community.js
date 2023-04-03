@@ -4,7 +4,7 @@ import {w_styles} from "../styles/screens/trails/tab_bar";
 import {styles} from "../styles/screens/community/community";
 import { template } from '../styles/template/page';
 import IconFontAwe from "react-native-vector-icons/FontAwesome";
-import IconSimple from "react-native-vector-icons/SimpleLineIcons";
+import IconWrite from "react-native-vector-icons/Octicons";
 import { GREEN_COLOR, Light_GREEN,Dark_Gary } from '../utils/color';
 
 import CompanionCommunity from './companionCom';
@@ -31,7 +31,7 @@ class Community extends Component {
         return (
           <>
             <TouchableOpacity style={styles.writeButton} activeOpacity={0.8} onPress={this.goWriteCommunityScreen}>
-                <IconSimple name="note" color={'white'} size={30} />
+                <IconWrite name="plus" color={'white'} size={30} />
             </TouchableOpacity>
           <View style={{flex:1}}>
           
