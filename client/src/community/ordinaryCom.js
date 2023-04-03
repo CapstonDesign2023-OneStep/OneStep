@@ -28,6 +28,7 @@ class OrdinaryCommunity extends Component {
 
        <View style={styles.listView}>
             <FlatList
+                showsVerticalScrollIndicator={false}
                 data={this.state.ordinalCom}
                 renderItem={({item,index})=><ListItem index={index} item={item}
                 />}/>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View,Text,ScrollView,Image, TouchableOpacity } from 'react-native';
+import { View,Text,ScrollView,Image, TouchableOpacity,Alert } from 'react-native';
 
 import { template } from "../styles/template/page";
 import {styles} from "../styles/screens/user/myPage";
@@ -26,7 +26,16 @@ class MyPage extends Component {
     }
     //로그아웃 버튼 클릭
     logoutButtonClicked=()=>{
-        this.props.navigation.navigate('OnBoarding')
+        Alert.alert(
+            '',
+            '로그아웃 하시겠습니까?',
+            [
+                { text: '취소', onPress: () => console.log('Cancel Pressed'), style: 'cancel' },
+                { text: '확인', onPress: () => this.props.navigation.navigate('OnBoarding') },
+            ],
+            { cancelable: false });
+        return true;
+        
     }
     render() {
         return (

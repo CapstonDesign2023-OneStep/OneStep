@@ -58,7 +58,7 @@ class Home extends Component {
                 <Image
                     source={require('../images/logo_korean2.png')} style={{width:100,height:60}}/>
             </View>
-            <ScrollView>
+            <ScrollView showsVerticalScrollIndicator={false}>
             <View style={styles.profileView}>
                  <View style={styles.profileImageView}>
                     <Image

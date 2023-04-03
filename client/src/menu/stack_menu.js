@@ -50,7 +50,7 @@ class Stack extends Component{
                 <NativeStack.Screen name="TrailNote" component={TrailNote}
                 options={{ title:'산책기록' }} />
                 <NativeStack.Screen name="EditProfile" component={EditProfile}
-                options={{ title:'내정보 수정' }} />
+                options={{ title:'계정' }} />
             </NativeStack.Navigator>
             
         );

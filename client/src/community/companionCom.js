@@ -23,6 +23,7 @@ class CompanionCommunity extends Component {
         return (
        <View style={styles.listView}>
             <FlatList
+                showsVerticalScrollIndicator={false}
                 data={this.state.companionCom}
                 renderItem={({item,index})=><ListItem index={index} item={item}
                 />}/>
