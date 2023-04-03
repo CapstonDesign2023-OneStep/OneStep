@@ -5,6 +5,7 @@ import { template } from "../styles/template/page";
 import {styles} from "../styles/screens/user/myPage";
 
 import IconFontAwe from "react-native-vector-icons/FontAwesome";
+import IconMaterial from "react-native-vector-icons/MaterialIcons";
 import { BLUE_COLOR, Dark_Gary, GREEN_COLOR, Light_GREEN, RED_COLOR,Light_Gray } from '../utils/color';
 class MyPage extends Component {
     constructor(props) {
@@ -23,6 +24,10 @@ class MyPage extends Component {
     goEditProfileScreen=()=>{
         this.props.navigation.navigate('EditProfile');
     }
+    //로그아웃 버튼 클릭
+    logoutButtonClicked=()=>{
+        this.props.navigation.navigate('OnBoarding')
+    }
     render() {
         return (
         <ScrollView>
@@ -35,6 +40,7 @@ class MyPage extends Component {
                     </View>
                     <View style={{width:'70%',paddingLeft:'10%'}}>
                     <Text style={[template.titleText,{fontSize:20}]}>지유미</Text>
+                    
                     <Text>jiyumi00@naver.com</Text>
                     </View>
                     <TouchableOpacity activeOpacity={0.7} onPress={this.goEditProfileScreen}><IconFontAwe name="angle-right" color={Dark_Gary} size={40} /></TouchableOpacity>
@@ -69,7 +75,7 @@ class MyPage extends Component {
                 </View>
               
                 <View style={styles.menuView}>
-                    <TouchableOpacity style={styles.buttonStyle}>
+                    <TouchableOpacity style={styles.buttonStyle} activeOpacity={0.7}>
                         <View style={styles.IconStyle}>
                             <IconFontAwe name="bell" color={Dark_Gary} size={25} />
                         </View>
@@ -78,7 +84,7 @@ class MyPage extends Component {
                         </View>
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={styles.buttonStyle}>
+                    <TouchableOpacity style={styles.buttonStyle} activeOpacity={0.7}>
                         <View style={styles.IconStyle}>
                             <IconFontAwe name="question-circle-o" color={Dark_Gary} size={25} />
                         </View>
@@ -87,6 +93,14 @@ class MyPage extends Component {
                         </View>
                     </TouchableOpacity>
 
+                    <TouchableOpacity style={styles.buttonStyle} activeOpacity={0.7} onPress={this.logoutButtonClicked}>
+                        <View style={styles.IconStyle}>
+                            <IconMaterial name="logout" color={Dark_Gary} size={25} />
+                        </View>
+                        <View  style={styles.menuTextView}>
+                        <Text style={template.titleText}>로그아웃</Text>
+                        </View>
+                    </TouchableOpacity>
                    
                 </View>
             </View>

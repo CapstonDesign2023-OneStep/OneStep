@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { View,Text,ScrollView, TouchableOpacity,TextInput } from 'react-native';
 
+import IconCamera from 'react-native-vector-icons/SimpleLineIcons';
 import { Picker } from '@react-native-picker/picker';
 import { template } from "../styles/template/page";
 import {styles} from "../styles/screens/community/community";
@@ -16,6 +17,9 @@ class WriteCommunity extends Component {
             contents:"",
             validForm:false,
         }
+    }
+    cameraButtonClicked=()=>{
+
     }
    //입력값 유효성 검사
    onValueChange = (value) => {
@@ -62,6 +66,9 @@ class WriteCommunity extends Component {
             />
            </View>
            <View style={styles.buttonView}>
+                <TouchableOpacity style={styles.camera_btn} onPress={this.cameraButtonClicked}>
+                    <IconCamera name="picture" size={30} color={Dark_Gary}></IconCamera>
+                </TouchableOpacity>
                {this.state.validForm? <TouchableOpacity style={[template.button]}><Text style={template.buttonText}>등록하기</Text></TouchableOpacity>:
                <TouchableOpacity style={[template.button,{backgroundColor:Light_Gray}]}><Text style={template.buttonText}>등록하기</Text></TouchableOpacity>} 
            </View>

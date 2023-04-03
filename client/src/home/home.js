@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View,Text,ScrollView,TouchableOpacity,Image } from 'react-native';
+import { View,Text,ScrollView,TouchableOpacity,Image ,BackHandler,Alert} from 'react-native';
 
 import { template } from "../styles/template/page";
 import {styles} from "../styles/screens/home/home";
@@ -22,6 +22,13 @@ class Home extends Component {
                         {number:5, title:"풍경좋은 산책로 추천",kind:1,heart:5, comments:15}]
         }
     }
+    componentDidMount() {
+        BackHandler.addEventListener("hardwareBackPress", this.backPressed); //뒤로가기 이벤트
+    }
+
+    componentWillUnmount() {
+        BackHandler.removeEventListener("hardwareBackPress", this.backPressed);
+    }
     goTrailScreen=()=>{
         this.props.navigation.navigate('GetTrails');
     }
@@ -32,6 +39,18 @@ class Home extends Component {
         let kindText=["일반인 게시판","반려인 게시판"];
         return kindText[value-1];
     }
+    backPressed = () => {
+        Alert.alert(
+            '',
+            '앱을 종료하시겠습니까?',
+            [
+                { text: '취소', onPress: () => console.log('Cancel Pressed'), style: 'cancel' },
+                { text: '확인', onPress: () => BackHandler.exitApp() },
+            ],
+            { cancelable: false });
+        return true;
+    }
+
     render() {
         return (
         <View style={styles.total_container}>
