@@ -4,7 +4,7 @@ import {w_styles} from "../styles/screens/trails/tab_bar";
 import {styles} from "../styles/screens/community/community";
 import { template } from '../styles/template/page';
 import IconFontAwe from "react-native-vector-icons/FontAwesome";
-
+import IconSimple from "react-native-vector-icons/SimpleLineIcons";
 import { GREEN_COLOR, Light_GREEN,Dark_Gary } from '../utils/color';
 
 import CompanionCommunity from './companionCom';
@@ -30,14 +30,13 @@ class Community extends Component {
     render() {
         return (
           <>
-          <View style={{flex:1}}>
-         
-
             <TouchableOpacity style={styles.writeButton} activeOpacity={0.8} onPress={this.goWriteCommunityScreen}>
-                <IconFontAwe name="plus-circle" color={GREEN_COLOR} size={50} />
+                <IconSimple name="note" color={'white'} size={30} />
             </TouchableOpacity>
+          <View style={{flex:1}}>
           
-           
+          
+    
             <View style={w_styles.searchBarView}>
                 <IconFontAwe name="search" color={Dark_Gary} size={20} />
                 <TextInput style={w_styles.searchTextInput}
@@ -53,8 +52,8 @@ class Community extends Component {
                     <Text style={this.state.visible==2 ? [template.titleText,{color:GREEN_COLOR}]:template.titleText}>반려인</Text>
                 </TouchableOpacity>
             </View>
-          {/*   {this.state.visible==1 && <OrdinaryCommunity/>}
-            {this.state.visible==2 && <CompanionCommunity/>} */}
+            {this.state.visible==1 && <OrdinaryCommunity/>}
+            {this.state.visible==2 && <CompanionCommunity/>}
             </View>
             </>
         );
