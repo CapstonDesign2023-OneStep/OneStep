@@ -18,6 +18,7 @@ class Tabs extends Component{
     render(){
         return(
         <Tab.Navigator 
+            initialRouteName='Home'
             sceneContainerStyle={{
                 backgroundColor:"white"
             }}

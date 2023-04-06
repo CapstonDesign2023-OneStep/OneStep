@@ -24,7 +24,7 @@ class ListItem extends Component{
             <View style={styles.itemView}>
                 <View style={styles.imageView}>
                     <Image
-                        source={{uri:this.state.imageURI[this.props.index]}} style={{width:'90%',height:'90%', borderRadius:20,}}/>
+                        source={{uri:this.state.imageURI[this.props.index]}} style={{width:65,height:65, borderRadius:20,}}/>
                 </View>
                 <View style={styles.contentView}>
                     <View style={styles.topView}>

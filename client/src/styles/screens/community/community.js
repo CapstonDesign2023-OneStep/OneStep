@@ -5,18 +5,18 @@ const ScreenHeight=Dimensions.get('window').height;
 const ScreenWidth=Dimensions.get('window').width;
 export const styles = StyleSheet.create({
     writeButton:{
-        width:50,
-        height:50,
+        width:55,
+        height:55,
         borderWidth:1,
         borderColor:GREEN_COLOR,
         backgroundColor:GREEN_COLOR, 
-        borderRadius:20,
+        borderRadius:30,
         top:'88%',
-        left:'83%',
+        left:'80%',
         position:'absolute',
         justifyContent:'center',
         alignItems:'center',
-        elevation:10,
+        elevation:20,
         zIndex:999,
     },
     listView:{

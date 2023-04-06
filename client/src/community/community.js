@@ -14,6 +14,7 @@ class Community extends Component {
         super(props);
         this.state={visible:1}
     }
+    
    ordinatyClicked=()=>{
         this.setState({visible:1})
    }
