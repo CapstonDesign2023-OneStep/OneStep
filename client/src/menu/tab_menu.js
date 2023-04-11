@@ -40,6 +40,7 @@ class Tabs extends Component{
                     fontSize:10,
                     fontWeight:"600",
                 }
+                
             }}>
                 <Tab.Screen name="Home" component={Home} options={{
                     title:"홈", headerShown:false,

@@ -21,15 +21,15 @@ class Stack extends Component{
     render(){
         return(
 
-            <NativeStack.Navigator initialRouteName="OnBoarding"
+            <NativeStack.Navigator initialRouteName="Login"
             screenOptions={{
                 headerTitleAlign: 'center',
             }}>
                 {/*로그인*/}
                 <NativeStack.Screen name="TabHome" component={TabHome}
                 options={{ headerShown:false}} />
-                <NativeStack.Screen name="OnBoarding" component={OnBoarding}
-                options={{ headerShown: false }} />
+               {/*  <NativeStack.Screen name="OnBoarding" component={OnBoarding}
+                options={{ headerShown: false }} /> */}
                 <NativeStack.Screen name="MemberRegister" component={MemberRegister}
                 options={{ title:'회원가입' }} />
                  <NativeStack.Screen name="Login" component={Login}

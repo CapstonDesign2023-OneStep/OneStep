@@ -33,5 +33,10 @@ export const styles = StyleSheet.create({
         marginBottom:'2%',
         fontWeight:"bold",
         fontSize:17,
-   }
+   },
+   errorMessageText:{
+    
+    fontSize: 13,
+    color: "#FD9C91",
+   },
 });

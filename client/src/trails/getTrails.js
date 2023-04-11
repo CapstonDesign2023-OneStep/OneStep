@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View,Text,ScrollView,TextInput,TouchableOpacity } from 'react-native';
+import { View,Text,ScrollView,TextInput,TouchableOpacity,BackHandler } from 'react-native';
 import {w_styles} from "../styles/screens/trails/tab_bar";
 import { template } from '../styles/template/page';
 import IconFontAwe from "react-native-vector-icons/FontAwesome";
@@ -13,6 +13,7 @@ class GetTrails extends Component {
         super(props);
         this.state={visible:1}
     }
+   
    ordinatyClicked=()=>{
         this.setState({visible:1})
    }
