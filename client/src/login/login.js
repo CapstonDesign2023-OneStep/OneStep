@@ -13,8 +13,8 @@ class Login extends Component {
 
         this.passwordRef=React.createRef();
         this.state={
-            id:'',
-            passwd:'',
+            email:'',
+            passWd:'',
             autoLoginChecked:false,
             validForm:false, //유효성 검사
         }
@@ -31,7 +31,35 @@ class Login extends Component {
    
     //로그인 버튼 클릭
     loginButtonClicked=()=>{
+        this.callAddLoginAPI().then((response)=>{
+            console.log('로그인여부',response)
+        })
         this.props.navigation.navigate("TabHome");
+    }
+    async callAddLoginAPI(){
+        const logininfo={
+            email:this.state.email,
+            passWd:this.state.passWd
+        }
+        let url="http://localhost:3000/login";
+        let options={
+            method:'POST',
+            mode:'cors',
+            headers:{
+                'Accept':'application/json',
+                'Content-Type':'application/json;charset=UTF-8'
+            },
+            body: JSON.stringify({
+                email:this.state.email,
+                passWd:this.state.passWd
+            })
+        }
+        let response = await fetch(url, options);
+        
+        if (response.ok) {
+            return response.json();
+            // do something with data
+        } 
     }
     //자동 로그인 버튼
     autoLoginRadioButtonChecked=()=>{
@@ -49,13 +77,12 @@ class Login extends Component {
     }
      //입력값 유효성 검사
      onValueChange = (value) => {
-
         this.setState(value,()=>{
             let isValidForm = true;
-            if (this.state.id.trim().length == 0) { // 조건 필요시 추가
+            if (this.state.email.trim().length == 0) { // 조건 필요시 추가
                 isValidForm = false;
             }
-            if (this.state.passwd.trim().length == 0) {
+            if (this.state.passWd.trim().length == 0) {
                 isValidForm = false;
             }
             console.log("isValidForm", isValidForm);
@@ -73,12 +100,12 @@ class Login extends Component {
                             placeholder="이메일"
                             returnKeyType="next"
                             onSubmitEditing={()=>{this.passwordRef.focus();}}
-                            onChangeText={(value) => {this.onValueChange({id:value})}} 
+                            onChangeText={(value) => {this.onValueChange({email:value})}} 
                         />
                         <TextInput style={template.textInput}
                             ref={(c)=>{this.passwordRef=c;}}
                             placeholder="비밀번호"
-                            onChangeText={(value)=>{this.onValueChange({passwd:value})}}
+                            onChangeText={(value)=>{this.onValueChange({passWd:value})}}
                             secureTextEntry={true}
                         />
                         <TouchableOpacity activeOpacity={0.8} style={{flexDirection:'row',alignItems:'center'}} onPress={this.autoLoginRadioButtonChecked}>

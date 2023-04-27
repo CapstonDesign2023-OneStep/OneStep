@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View,Text,ScrollView,TextInput,TouchableOpacity, TouchableNativeFeedback } from 'react-native';
+import { View,Text,ScrollView,TextInput,TouchableOpacity, TouchableNativeFeedback,BackHandler,Alert } from 'react-native';
 import {w_styles} from "../styles/screens/trails/tab_bar";
 import {styles} from "../styles/screens/community/community";
 import { template } from '../styles/template/page';
@@ -14,7 +14,7 @@ class Community extends Component {
         super(props);
         this.state={visible:1}
     }
-    
+
    ordinatyClicked=()=>{
         this.setState({visible:1})
    }
@@ -28,6 +28,7 @@ class Community extends Component {
    goWriteCommunityScreen=()=>{
     this.props.navigation.navigate('WriteCommunity');
    }
+ 
     render() {
         return (
           <>

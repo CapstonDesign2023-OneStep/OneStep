@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Dimensions, Image, Platform, Pressable, StyleSheet} from 'react-native';
+import {Dimensions, Image, Platform, Pressable, StyleSheet,BackHandler,Alert} from 'react-native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
 import { BLACK_COLOR,Dark_Gary,GREEN_COLOR,Light_Gray } from '../utils/color';
@@ -14,7 +14,7 @@ import MyPage from '../user/mypage';
 
 const Tab = createBottomTabNavigator(); // Tab 일 경우
 class Tabs extends Component{
-
+ 
     render(){
         return(
         <Tab.Navigator 

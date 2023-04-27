@@ -1,13 +1,18 @@
+
+
 import React, { Component } from 'react';
 import { View,Text,ScrollView, TouchableOpacity,TextInput } from 'react-native';
 
 import { template } from "../styles/template/page";
 import {styles} from "../styles/screens/login/member_register";
-
+import Constant from "../utils/webservice_manager";
 import { BLUE_COLOR, Dark_Gary, GREEN_COLOR, Light_BLUE, Light_GREEN ,Light_Gray} from '../utils/color';
 import Swiper from 'react-native-swiper'
-
+import WebServiceManager from '../utils/webservice_manager';
+import { response } from 'express';
+//import Axios from 'axios';
 class MemberRegister extends Component {
+    
     constructor(props) {
         super(props);
         this.state={
@@ -28,12 +33,17 @@ class MemberRegister extends Component {
     }
     //가입완료 버튼 클릭
     registerButtonClicked=()=>{
-        this.callAddUserAPI().then((response)=>{
+         this.callAddUserAPI().then((response)=>{
+            console.log('res',response)
             
+            this.props.navigation.navigate("Login");
+          
+           
         })
+ 
     }
     async callAddUserAPI(){
-        const userDate={
+      const userInfo={
             nickName:this.state.nickName,
             birthDate:this.state.birthDate,
             type:this.state.type,
@@ -41,6 +51,52 @@ class MemberRegister extends Component {
             passWd:this.state.passWd,
             phoneNum:this.state.phoneNum,
         }
+        console.log('userInfo',userInfo)
+        let url="http://localhost:3000/signup";
+        let options={
+            method:'POST',
+            mode:'cors',
+            headers:{
+                'Accept':'application/json',
+                'Content-Type':'application/json;charset=UTF-8'
+            },
+            body: JSON.stringify({
+                nickName:this.state.nickName,
+                birthDate:this.state.birthDate,
+                type:this.state.type,
+                email:this.state.email,
+                passWd:this.state.passWd,
+                phoneNum:this.state.phoneNum,
+            })
+        }
+        let response = await fetch(url, options);
+        console.log('response',response)
+        if (response.ok) {
+            return response.json();
+            // do something with data
+        } 
+
+
+     /*    const userData={
+            nickName:this.state.nickName,
+            birthDate:this.state.birthDate,
+            type:this.state.type,
+            email:this.state.email,
+            passWd:this.state.passWd,
+            phoneNum:this.state.phoneNum,
+        }
+        let manager = new WebServiceManager(Constant.serviceURL+"/create","post");
+
+        manager.addFormData("data",userData);
+        
+        console.log(userData)
+        let response = await manager.start();
+        if (response.ok) {
+            return response.json();
+        }
+        else
+            Promise.reject(response) */
+
     }
     //입력값 유효성 검사
     onValueChange = (value) => {
@@ -172,7 +228,7 @@ class MemberRegister extends Component {
                 {this.state.validForm ?  <TouchableOpacity activeOpacity={0.8} style={[template.button]} onPress={this.registerButtonClicked} >
                 <Text style={template.buttonText}>가입완료</Text>
                 </TouchableOpacity> :
-                <TouchableOpacity activeOpacity={0.8} style={[template.button,{backgroundColor:Light_Gray}]} >
+                <TouchableOpacity activeOpacity={0.8} style={[template.button,{backgroundColor:Light_Gray}]} onPress={this.registerButtonClicked}>
                 <Text style={template.buttonText}>가입완료</Text>
                 </TouchableOpacity>    } 
             </View>

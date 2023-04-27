@@ -1,5 +1,5 @@
 {
-  "name": "Client",
+  "name": "server",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -19,6 +19,11 @@
     "@react-navigation/material-top-tabs": "^6.6.2",
     "@react-navigation/native": "^6.0.13",
     "@react-navigation/native-stack": "^6.9.1",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "mongodb": "^3.6.4",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0",
     "react": "18.1.0",
     "react-native": "0.70.4",
     "react-native-calendars": "^1.1294.0",
@@ -50,5 +55,9 @@
   },
   "jest": {
     "preset": "react-native"
-  }
+  },
+  "main": "server.js",
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
